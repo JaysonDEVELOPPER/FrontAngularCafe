@@ -1,0 +1,26 @@
+
+<section>
+  <div class="text-center ">
+    <h2>LES PRODUITS CREPE ORIGNAL</h2>
+  </div>
+
+  <table class="table text-center p">
+    <thead>
+      <tr>
+        <th scope="col" class="table-dark">Produits</th>
+        <th scope="col" class="table-dark">Prix</th>
+        <th scope="col" class="table-dark">Quantite</th>
+        <th scope="col" class="table-dark">Ajoutez aux panier</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of allProduits" class="button-acheter">
+        <td class="table-primary">{{ produit?.nom }}</td>
+        <td class="table-danger">{{ produit?.prix}} €</td>
+        <td class="table-primary">{{ produit?.quantiter }}</td>
+        <td class="table-secondary"><button type="button" class="btn btn-outline-success">Acheter</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,41 @@
+// SECTION PRESENTATION IMG TITRE PARAGRAPHE  
+
+.container-img-presentation {
+    position: relative;
+
+    img {
+        filter : brightness(50%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    img::after {
+        content: "";
+        position: absolute;
+
+        background-color: rgb(3, 3, 3); // Filtre noir avec opacité de 2%
+    }
+
+    h2 {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(244, 238, 238); // Couleur du texte h2
+        font-size: 2.2em;
+    }
+
+    p {
+        font-size: 1em;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 80%);
+        color: rgb(211, 209, 209); // Couleur du texte p
+    }
+}
