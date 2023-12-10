@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Users } from '../interfaces/users';
+import { Response } from '../interfaces/response';
 
 @Injectable({
   providedIn: 'root',
@@ -8,31 +9,31 @@ export class UsersService {
   private url: string = 'http://localhost:3003/users';
   constructor() {}
 
-  async getAllUsers(): Promise<Users[]> {
+  async getAllUsers(): Promise<Response> {
     const data = await fetch(`${this.url}/`);
     return data.json();
   }
 
-  async getByIdUser(id: number | null | undefined): Promise<Users[]> {
+  async getByIdUser(id: number): Promise<Response> {
     const data = await fetch(`${this.url}/byid/${id}`);
     return data.json();
   }
 
   async createUser(
-    email: string | null | undefined,
-    role: string | null | undefined,
-    password: string | null | undefined,
+    nom: string | null | undefined,
     prenom: string | null | undefined,
-    nom: string | null | undefined
+    age: string | null | undefined,
+    email: string | null | undefined,
+    password: string | null | undefined, 
   ): Promise<any> {
     const data = await fetch(`${this.url}/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        email: email,
-        role: role,
         nom: nom,
         prenom: prenom,
+        age: age,
+        email: email,
         password: password,
       }),
     });

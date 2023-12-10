@@ -1,0 +1,22 @@
+.card-with-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.background {
+    background-color: rgba(79, 68, 68, 0.481);
+    
+}
+.background::before{
+    filter: brightness(50%);
+}
+.displayCroix {
+    transform: translate(
+        50%,50%
+    );
+}
+
+.card-body {
+    padding: 50px;
+}

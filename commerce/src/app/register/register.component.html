@@ -1,0 +1,59 @@
+<app-header></app-header>
+
+<div class="container mt-5 mb-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title text-center mb-4">Formulaire d'enregistrement</h2>
+  
+            <form [formGroup]="applyForm" (ngSubmit)="submitForm()" class="mb-4">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+              </div>
+  
+              <div class="mb-3">
+                <label for="firstName" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="firstName" formControlName="prenom">
+              </div>
+  
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="lastName" formControlName="nom">
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password" formControlName="password" autocomplete="off">
+              </div>
+  
+              <div class="mb-3">
+                <label for="age" class="form-label">Âge</label>
+                <input type="number" class="form-control" id="age" formControlName="age">
+              </div>
+  
+              <button type="submit" class="btn btn-primary">S'inscrire</button>
+            </form>
+            <a  href="/login" >Se connecter</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="message" class="card text-white background card-with-message" style="width: 35rem;">
+    <div class="displayCroix">
+      <button type="button" class="btn-close" data-bs-dismiss="toast" (click)="reset()" aria-label="Close"></button>
+    </div>
+    
+    <div class="card-body text-center">
+      <h5 class="card-title">Titre de la Carte</h5>
+      <h1 class="mt-4">{{ message }}</h1>
+    </div>
+  </div>
+
+  
+
+<app-footer></app-footer>

@@ -4,5 +4,6 @@ export interface Users {
     prenom: string;
     nom: string;
     iduser: number;
+    age: number;
     role: string;
 }

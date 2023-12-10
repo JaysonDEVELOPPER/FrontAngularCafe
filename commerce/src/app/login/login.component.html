@@ -1,3 +1,4 @@
+<app-header></app-header>
 <section class="login">
     <div class="text-center mt-4">
         <h1>CONNEXION</h1>
@@ -13,11 +14,14 @@
                     <label for="password" class="form-label">Password</label>
                     <input type="password" id="password" class="form-control" placeholder="Password" formControlName="password" autocomplete="Off">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Conenxion</button>
                 <button *ngIf="isLoggedIn" type="button" class="btn btn-danger" (click)="logout()">Déconnexion</button>
             </form>
             <h1 class="mt-3">{{response.message}}</h1>
             <h1 class="mt-3">{{message}}</h1>
+            <a href="/enregistrement" >s'enregister</a> <br><br>
+            <a *ngIf="isPanelAdmin" href="/adminpanel">Panel Admin</a>
         </div>
     </div>
 </section>
+<app-footer></app-footer>

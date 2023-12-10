@@ -5,11 +5,12 @@ import { ProduitsService } from '../services/produits.service';
 import { Produits } from '../interfaces/produits';
 import { AppComponent } from '../app.component';
 import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-produits',
   standalone: true,
-  imports: [CommonModule,AppComponent,FooterComponent],
+  imports: [CommonModule,AppComponent,FooterComponent,RouterOutlet,HeaderComponent],
   templateUrl: './produits.component.html',
   styleUrl: './produits.component.scss',
 })
