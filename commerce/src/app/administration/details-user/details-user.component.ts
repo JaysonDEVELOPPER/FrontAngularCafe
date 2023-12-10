@@ -1,16 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Users } from '../interfaces/users';
-import { UsersService } from '../services/users.service';
+import { Users } from '../../interfaces/users';
+import { UsersService } from '../../services/users.service';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../../header/header.component';
+import { FooterComponent } from '../../footer/footer.component';
 import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-details-user',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent,RouterLink],
+  imports: [CommonModule, HeaderComponent, FooterComponent, RouterLink],
   templateUrl: './details-user.component.html',
   styleUrl: './details-user.component.scss',
 })
@@ -39,9 +39,9 @@ export class DetailsUserComponent {
       });
   }
   deleteUser(id: number) {
-    this.userService.deleteProduct(id).then(data => {
+    this.userService.deleteProduct(id).then((data) => {
       console.log(data);
-      this.location.back()
+      this.location.back();
     });
   }
 }

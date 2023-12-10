@@ -1,11 +1,16 @@
 import { Component, inject } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
+import { HeaderComponent } from '../../header/header.component';
+import { FooterComponent } from '../../footer/footer.component';
 import { CommonModule } from '@angular/common';
-import { FormGroup, FormControl, ReactiveFormsModule ,Validators} from '@angular/forms';
-import { Users } from '../interfaces/users';
+import {
+  FormGroup,
+  FormControl,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+import { Users } from '../../interfaces/users';
 import { ActivatedRoute } from '@angular/router';
-import { UsersService } from '../services/users.service';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-update-user',

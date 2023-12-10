@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ProduitsComponent } from './produits/produits.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './authentificaion/login/login.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
