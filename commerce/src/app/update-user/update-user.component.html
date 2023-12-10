@@ -1,0 +1,52 @@
+<app-header></app-header>
+
+<!-- <div *ngIf="response.message" class="alert alert-danger" role="alert">
+    {{ response.message }}
+  </div> -->
+
+<div class="card p-4 mb-5 mt-5">
+    <h2 class="mb-4">Profile Update</h2>
+      <form [formGroup]="applyForm" (ngSubmit)="submitForm()" class="mb-4">
+
+        <div class="mb-3">
+          <label for="id" class="form-label">ID : </label>
+          <input type="number" class="form-control" id="id" placeholder="{{ user.iduser }}" [readonly]="true" formControlName="id">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email : </label>
+          <input type="email" class="form-control" placeholder="{{  user.email }}" id="email" formControlName="email">
+        </div>
+
+        <div class="mb-3">
+          <label for="firstName" class="form-label">Prénom : </label>
+          <input type="text" class="form-control" id="firstName" placeholder="{{  user.prenom }}" formControlName="prenom">
+        </div>
+
+        <div class="mb-3">
+          <label for="lastName" class="form-label">Nom : </label>
+          <input type="text" class="form-control" id="lastName" placeholder="{{  user.nom }}" formControlName="nom">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Mot de passe : </label>
+          <input type="password" class="form-control" id="password" formControlName="password" autocomplete="off">
+        </div>
+
+        <div class="mb-3">
+          <label for="age" class="form-label">Âge : {{  user.age }}</label>
+          <input type="number" class="form-control" id="age"  placeholder="{{  user.age }}" formControlName="age">
+        </div>
+
+        <div class="mb-3">
+          <label for="role" class="form-label">Role : {{  user.role }}</label>
+          <input type="text" class="form-control" id="role" formControlName="role">
+        </div>
+
+      <button id="updateButton"  class="btn btn-primary mb-4">Mettre à jour</button>
+    </form>
+    <a href="/adminpanel" class="btn btn-warning">Retour</a>
+    <!-- Message j'aimerais qui s'affiche ici ! {{ ici }} -->
+  </div>
+
+<app-footer></app-footer>

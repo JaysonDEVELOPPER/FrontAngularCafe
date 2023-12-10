@@ -28,4 +28,19 @@ export class AdminpanelComponent {
       this.allUsers = data.data;
     });
   }
+
+  filterResults(text: string) {
+    if (!text || undefined) {
+      this.serviceUsers.getAllUsers().then((data) => {
+        console.log(data)
+        this.response = "aucun résultat trouuver à se nom"
+        this.allUsers = data.data;
+      });
+    }
+    this.serviceUsers.getByNomUser(text).then((data)=> {
+      console.log(data.data)
+      this.allUsers = data.data
+      this.response = `Nombre de personne trouver ${data.data.length}`
+    })
+  }
 }

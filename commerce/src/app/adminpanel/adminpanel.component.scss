@@ -19,4 +19,17 @@ tbody td {
   color: rgba(255,255,255,.65);
 }
 
+p {
+  color: #fff;
+}
 
+.margin {
+  
+  input{
+    margin: 5px;
+  }
+
+  input::placeholder{
+    color: #fff;
+  }
+}

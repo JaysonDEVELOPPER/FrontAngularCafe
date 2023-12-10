@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Users } from '../interfaces/users';
 import { UsersService } from '../services/users.service';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-details-user',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent,RouterLink],
   templateUrl: './details-user.component.html',
   styleUrl: './details-user.component.scss',
 })

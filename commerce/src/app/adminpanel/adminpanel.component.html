@@ -1,5 +1,24 @@
 <app-header></app-header>
 
+<div class="d-flex justify-content-center mb-5">
+  <form class="mt-4 margin">
+    <div class="center">
+      <input type="text" class="btn btn-outline-primary " placeholder="Nom utilisateur" #filter />
+      <button
+        class="primary btn btn-info"
+        type="button"
+        (click)="filterResults(filter.value)"
+      >
+        Recherche
+      </button>
+    </div>
+  </form>
+</div>
+
+<div class="text-center mt-5 mb-5">
+  <p>{{response}}</p>
+</div>
+
 <section class="intro">
     <div class="gradient-custom-2">
       <div class="mask d-flex align-items-center">

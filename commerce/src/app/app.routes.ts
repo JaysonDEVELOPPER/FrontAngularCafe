@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { DetailsUserComponent } from './details-user/details-user.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 export const routes: Routes = [{
     path: '',
     component: HomeComponent,
@@ -41,6 +42,11 @@ export const routes: Routes = [{
     path: 'detailsUser/:id',
     component: DetailsUserComponent,
     title: "User panel",
+},
+{
+    path: 'updateUser/:nom/:prenom/:id',
+    component: UpdateUserComponent,
+    title: "Mise a jours user",
 },
 
 ];

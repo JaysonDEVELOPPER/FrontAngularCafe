@@ -6,6 +6,7 @@
 
 <div class="card p-4 mb-5">
     <h2 class="mb-4">Profile utilisateur</h2>
+    <p id="id">ID: {{  user.iduser }}</p>
     <p id="nom">Nom: {{  user.nom }}</p>
     <p id="prenom">Prénom: {{  user.prenom }}</p>
     <p id="email">Email: {{  user.email }}</p>
@@ -13,7 +14,7 @@
     <p id="role">Role: {{  user.role }}</p>
     <p id="password">Mot de passe: {{  user.password }}</p>
     <button id="deleteButton" (click)="deleteUser(user.iduser)" class="btn btn-danger">Supprimer</button>
-    <button id="updateButton" class="btn btn-primary mb-4">Mettre à jour</button>
+    <button id="updateButton" [routerLink]="['/updateUser', user.nom, user.prenom, user.iduser]" class="btn btn-primary mb-4">Mettre à jour</button>
     <a href="/adminpanel" class="btn btn-warning">Retour</a>
     <!-- Message j'aimerais qui s'affiche ici ! {{ ici }} -->
   </div>

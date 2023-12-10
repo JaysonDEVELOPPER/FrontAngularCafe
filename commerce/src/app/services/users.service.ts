@@ -19,12 +19,17 @@ export class UsersService {
     return data.json();
   }
 
+  async getByNomUser(name: string): Promise<Response> {
+    const data = await fetch(`${this.url}/bynom/${name}`);
+    return data.json();
+  }
+
   async createUser(
     nom: string | null | undefined,
     prenom: string | null | undefined,
     age: string | null | undefined,
     email: string | null | undefined,
-    password: string | null | undefined, 
+    password: string | null | undefined
   ): Promise<any> {
     const data = await fetch(`${this.url}/`, {
       method: 'POST',
@@ -40,11 +45,26 @@ export class UsersService {
     return data.json();
   }
 
-  async updateUser(id: number, users: Users): Promise<any> {
+  async updateUser(
+    id: number | null | undefined,
+    nom: string | null | undefined,
+    prenom: string | null | undefined,
+    age: number | null | undefined,
+    email: string | null | undefined,
+    password: string | null | undefined,
+    role: string | null | undefined
+  ): Promise<any> {
     const data = await fetch(`${this.url}/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(users),
+      body: JSON.stringify({
+        nom: nom,
+        prenom: prenom,
+        age: age,
+        email: email,
+        password: password,
+        role: role,
+      }),
     });
     return data.json();
   }
