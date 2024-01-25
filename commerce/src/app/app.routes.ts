@@ -15,9 +15,9 @@ export const routes: Routes = [
     title: 'Commerce Accueil',
   },
   {
-    path: 'panier/',
+    path: 'panier',
     component: PanierComponent,
-    title: 'Panier',
+    title: 'Panier commande',
   },
   {
     path: 'login',

@@ -1,0 +1,24 @@
+.container-panier {
+    height: 80vh;
+    padding: 20px;
+    background-color: red;
+
+    h2 {
+        text-align: center;
+        font-weight: 700;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border: 1px solid;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+
+    .carte {
+        margin: 0 auto;
+        width: 90%;
+        height: 80%;
+        border: white 2px solid;
+        border-radius: 5px;
+    }
+}
